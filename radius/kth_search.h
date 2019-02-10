@@ -6,15 +6,15 @@
 #define Q 1
 #define K 100
 
-void swap(int arr[K][2], int i, int j);
+void swap(float arr[K][2], float i, float j);
 
-void copy2(int src[2], int dst[2]);
+void copy2(float src[2], float dst[2]);
 
-void copy3(int src[3], int dst[3]);
+void copy3(float src[3], float dst[3]);
 
-int diff(int dst[3]);
+float diff(float dst[3]);
 
-void verify(int arr[K][2], int p[3], int index, int radius);
+void verify(float arr[K][2], float p[3], float index, float radius);
 
-//void execute(int points[N][3], int q[3], int result[K][3], int radius);
-void execute(int points[N][3], int q[3], int result[K][2], int radius);
+//void execute(float points[N][3], float q[3], float result[K][3], float radius);
+void execute(float points[N][3], float q[3], float result[K][2], float radius);
