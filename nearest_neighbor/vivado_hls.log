@@ -1,0 +1,64 @@
+INFO: [HLS 200-10] Running '/home/rhein/Documents/HLS/SDSoC/Vivado/2018.2/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'rhein' on host 'rhein' (Linux_x86_64 version 4.4.0-138-generic) on Tue Feb 12 15:58:40 EST 2019
+INFO: [HLS 200-10] On os Ubuntu 16.04.5 LTS
+INFO: [HLS 200-10] In directory '/home/rhein/Desktop/kth_search/nearest_neighbor'
+INFO: [HLS 200-10] Opening project '/home/rhein/Desktop/kth_search/nearest_neighbor/nearest_neighbor'.
+INFO: [HLS 200-10] Adding design file 'kth_search.cpp' to the project
+INFO: [HLS 200-10] Adding design file 'kth_search.h' to the project
+INFO: [HLS 200-10] Adding test bench file 'kth_search_test.cpp' to the project
+INFO: [HLS 200-10] Opening solution '/home/rhein/Desktop/kth_search/nearest_neighbor/nearest_neighbor/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [HLS 200-10] Analyzing design file 'kth_search.cpp' ... 
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 367.543 ; gain = 0.156 ; free physical = 3058 ; free virtual = 25330
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 367.543 ; gain = 0.156 ; free physical = 3058 ; free virtual = 25330
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 367.543 ; gain = 0.156 ; free physical = 3053 ; free virtual = 25326
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [XFORM 203-602] Inlining function 'diff' into 'verify' (kth_search.cpp:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'diff' into 'execute' (kth_search.cpp:35) automatically.
+INFO: [XFORM 203-602] Inlining function 'copy3' into 'execute' (kth_search.cpp:38) automatically.
+INFO: [XFORM 203-602] Inlining function 'verify' into 'execute' (kth_search.cpp:43) automatically.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 367.543 ; gain = 0.156 ; free physical = 3051 ; free virtual = 25324
+INFO: [XFORM 203-602] Inlining function 'diff' into 'verify' (kth_search.cpp:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'diff' into 'execute' (kth_search.cpp:35) automatically.
+INFO: [XFORM 203-602] Inlining function 'copy3' into 'execute' (kth_search.cpp:38) automatically.
+INFO: [XFORM 203-602] Inlining function 'verify' into 'execute' (kth_search.cpp:43) automatically.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 498.391 ; gain = 131.004 ; free physical = 3033 ; free virtual = 25307
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 498.391 ; gain = 131.004 ; free physical = 3033 ; free virtual = 25307
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'execute' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'execute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'copy3_label5'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 1, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'execute_label2'.
+WARNING: [SCHED 204-68] Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'store' operation (kth_search.cpp:22->kth_search.cpp:43) of variable 'distance', kth_search.cpp:6->kth_search.cpp:18->kth_search.cpp:43 on array 'result' and 'load' operation ('result_load', kth_search.cpp:20->kth_search.cpp:43) on array 'result'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 2, Depth = 5.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 6.7 seconds; current allocated memory: 71.141 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111]  Elapsed time: 0.06 seconds; current allocated memory: 71.473 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'execute' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-500] Setting interface mode on port 'execute/points' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'execute/q' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'execute/result' to 'ap_memory'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'execute' to 'ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Global array 'query' will not be exposed as RTL port.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'execute'.
+INFO: [HLS 200-111]  Elapsed time: 0.07 seconds; current allocated memory: 72.245 MB.
+INFO: [RTMG 210-278] Implementing memory 'execute_query_ram (RAM)' using distributed RAMs with power-on initialization.
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 498.391 ; gain = 131.004 ; free physical = 3022 ; free virtual = 25297
+INFO: [SYSC 207-301] Generating SystemC RTL for execute.
+INFO: [VHDL 208-304] Generating VHDL RTL for execute.
+INFO: [VLOG 209-307] Generating Verilog RTL for execute.
+INFO: [HLS 200-112] Total elapsed time: 7.34 seconds; peak allocated memory: 72.245 MB.

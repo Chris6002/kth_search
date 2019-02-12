@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="kth_search.h" path="/home/rhein/Desktop/kth_search/nearest_neighbor/kth_search.h"/>
+    <originFiles name="kth_search.cpp" path="/home/rhein/Desktop/kth_search/nearest_neighbor/kth_search.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="kth_search_test.cpp" path="/home/rhein/Desktop/kth_search/nearest_neighbor/kth_search_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
